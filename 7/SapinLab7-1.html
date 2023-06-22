@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #292929;
+            color: #fff;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #292929;
+            color: #fff;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #292929;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="showFormData(event)">
+        <pre>
+        <p>Ваше ім'я:</p>
+        <input name="name" type="text" maxlength="40" size="40" value="">
+        <p>Ваша стать:</p>
+        <p>Чоловіча: <input type="radio" name="pol" value="male"></p>
+        <p>Жіноча: <input type="radio" name="pol" value="female"></p>
+        <p>На якому курсі Ви навчаєтесь?</p>
+        <select name="curs" size="1">
+            <option value="1" selected>Перший</option>
+            <option value="2">Другий</option>
+            <option value="3">Третій</option>
+            <option value="4">Четвертий</option>
+            <option value="5">П'ятий </option>
+        </select>
+        <p>Які дисципліни ви вивчаєте на курсі?</p>
+        <p>WEB-програмування <input type="checkbox" name="web" value="yes"></p>
+        <p>Технічна електродинаміка <input type="checkbox" name="eldinam" value="yes"></p>
+        <p>Напишіть декілька слів про себе:</p>
+        </pre>
+        <textarea name="about" rows="6" cols="60" wrap="off"></textarea>
+        <p><input type="submit" value=" Відіслати дані ">
+            <input type="reset" value=" Очистити форму ">
+            <input type="file" name="friend" size="50" accept="припустимий тип файлу">
+    </form>
+    <script>
+        function showFormData(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            let dataString = '';
+            for (const [name, value] of formData.entries()) {
+                dataString += `${name}: ${value}\n`;
+            }
+
+            alert(dataString);
+        }
+    </script>
+</body>
+
+</html>

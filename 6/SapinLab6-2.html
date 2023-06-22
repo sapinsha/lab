@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        map[name="map2"] area {
+            border: 2px solid #fff;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        map[name="map2"] area:hover {
+            background-color: #555;
+        }
+
+        img {
+            border: 1px solid #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <map name="map2">
+        <area shape="rect" coords="0, 0, 300, 50" href="#" title="Блакитне небо">
+        <area shape="POLY" coords="120, 180,210,180,150,150" href="#" title="Човен">
+        <area shape="POLY" coords="0,20,50,20,30,140,0,120,0,20" href="#" title="Скеля">
+        <area shape="CIRCLE" coords="50,235,25" href="#" title="Камінь">
+    </map>
+    <IMG src="image/vodopad.jpeg" width=300 height=260 border=1 usemap="#map2">
+</body>
+
+</html>

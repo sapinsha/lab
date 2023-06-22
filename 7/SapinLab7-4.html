@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			background-color: #111;
+			color: #fff;
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			color: #ffcc00;
+		}
+
+		form {
+			margin-top: 20px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+
+		input[type="text"],
+		textarea {
+			padding: 5px;
+			border: 1px solid #666;
+			border-radius: 4px;
+			width: 300px;
+		}
+
+		select {
+			padding: 5px;
+			border: 1px solid #666;
+			border-radius: 4px;
+			width: 300px;
+			height: 100px;
+			overflow-y: scroll;
+		}
+
+		input[type="radio"],
+		input[type="checkbox"] {
+			margin-right: 5px;
+		}
+
+		input[type="submit"],
+		input[type="reset"] {
+			padding: 8px 15px;
+			border: none;
+			border-radius: 4px;
+			background-color: #ffcc00;
+			color: #111;
+			cursor: pointer;
+			font-weight: bold;
+		}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover {
+			background-color: #ffc000;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Замовлення на товар</h1>
+	<form action="#" method="post">
+		<label for="bank-account">Номер банківського рахунку:</label>
+		<input type="text" id="bank-account" name="bank-account"><br><br>
+		<label for="personal-id">Особистий номер користувача:</label>
+		<input type="text" id="personal-id" name="personal-id"><br><br>
+		<label for="product-list">Список товарів:</label>
+		<select id="product-list" name="product-list[]" multiple>
+			<option value="product1">Товар 1</option>
+			<option value="product2">Товар 2</option>
+			<option value="product3">Товар 3</option>
+		</select><br><br>
+		<label for="comments">Коментарі користувача:</label>
+		<textarea id="comments" name="comments"></textarea><br><br>
+		<label for="payment-type">Вид оплати:</label>
+		<label for="cash">Готівковий розрахунок: <input type="radio" id="cash" name="payment-type" value="cash"></label>
+		<label for="non-cash">Безготівковий розрахунок: <input type="radio" id="non-cash" name="payment-type" value="non-cash"></label><br><br>
+		<label>Додаткова інформація:</label><br>
+		<label for="balance">Залишки на рахунку: <input type="checkbox" id="balance" name="balance" value="yes"></label><br>
+		<label for="payments">Список останніх виплат по рахунку: <input type="checkbox" id="payments" name="payments" value="yes"></label><br><br>
+		<input type="submit" value="Надіслати">
+		<input type="reset" value="Скасувати">
+	</form>
+</body>
+
+</html>
