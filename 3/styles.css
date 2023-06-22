@@ -1,0 +1,43 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td {
+	padding: 20px;
+	vertical-align: top;
+}
+
+.left {
+	width: 50%;
+	float: left;
+}
+
+.right {
+	width: 50%;
+	float: right;
+}
+
+.caption {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.footer {
+	text-align: center;
+	font-style: italic;
+	padding: 10px;
+}

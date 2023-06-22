@@ -1,0 +1,24 @@
+.one
+{
+    padding-left: 20px;
+}
+.two
+{
+    padding-left: 40px;
+}
+.maintext
+{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+.studentstext
+{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+body
+{
+    background-image: url(images/studentsfile.jpg);
+}
